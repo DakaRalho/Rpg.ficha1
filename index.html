@@ -15,8 +15,7 @@
   
   .sheet {
     display: flex;
-    flex-direction: column; /* Mudança para empilhar elementos verticalmente */
-    align-items: center; /* Centralizar horizontalmente */
+    flex-direction: row; /* Manter na horizontal */
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -27,11 +26,11 @@
   .portrait {
     max-width: 200px;
     border-radius: 10px;
-    margin-bottom: 20px; /* Espaço abaixo do retrato */
+    margin-right: 20px; /* Espaço à direita do retrato */
   }
 
   .details {
-    text-align: center; /* Centralizar texto */
+    flex: 1;
   }
 
   .inventory {
@@ -46,25 +45,21 @@
 
   .skills {
     margin-top: 20px;
+    text-align: right; /* Alinhar à direita */
   }
 
-  ul {
+  .skills ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left;
+    text-align: left; /* Alinhar o texto à esquerda */
   }
 
-  li {
+  .skills li {
     margin-bottom: 5px;
   }
 
-  h1, h2 {
-    color: #ff004c;
-  }
-
-
-    .green {
+  .green {
     color: #00FF00; /* Verde */
   }
 
@@ -76,12 +71,14 @@
     color: #FFFF00; /* Amarelo */
   }
 
+  h1, h2 {
+    color: #ff004c;
+  }
 </style>
 </head>
 <body>
   <div class="sheet">
     <img src="caminho-da-sua-imagem.jpg" alt="Retrato do Personagem" class="portrait">
-    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
     <div class="details">
       <h1>Ficha de RPG</h1>
       <h2>Detalhes do Personagem</h2>
@@ -96,12 +93,14 @@
         <img src="icone-item-3.png" alt="Item 3" class="inventory-item">
         <!-- Adicione mais itens de inventário aqui -->
       </div>
-      <h2>Perícias</h2>
-      <div class="skills">
-        <ul>
-          <li>Acrobacias</li>
-          <li>Adestramento</li>
-          <li>Artes</li>
+    </div>
+    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem à direita -->
+  </div>
+  <div class="skills">
+    <ul>
+      <li class="green">Acrobacias</li>
+      <li class="blue">Adestramento</li>
+      <li class="yellow">Artes</li>
           <li>Atletismo</li>
           <li>Atualidades</li>
           <li>Ciências</li>
@@ -132,9 +131,7 @@
           <li>Fotografia</li>
           <li>Física</li>
           <li>Culinária</li>
-        </ul>
-      </div>
-    </div>
+    </ul>
   </div>
 </body>
 </html>
