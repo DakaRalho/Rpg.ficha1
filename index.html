@@ -15,7 +15,9 @@
   
   .sheet {
     display: flex;
-    flex-direction: column; /* Organizar elementos verticalmente */
+    flex-direction: row;
+    justify-content: space-between; /* Espaço uniforme entre os elementos */
+    align-items: center; /* Centralizar verticalmente */
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -26,15 +28,16 @@
   .portrait {
     max-width: 200px;
     border-radius: 10px;
-    align-self: center; /* Centralizar imagem */
-    margin-bottom: 20px; /* Espaço abaixo do retrato */
+    margin-left: 20px; /* Espaço à esquerda do retrato */
   }
 
   .details {
+    flex: 1;
     text-align: center; /* Centralizar texto */
   }
 
   .inventory {
+    text-align: center; /* Centralizar texto */
     margin-top: 20px;
   }
 
@@ -45,15 +48,14 @@
   }
 
   .skills {
+    text-align: left; /* Alinhar à esquerda */
     margin-top: 20px;
-    text-align: right; /* Alinhar à direita */
   }
 
   .skills ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left; /* Alinhar o texto à esquerda */
   }
 
   .skills li {
@@ -79,8 +81,6 @@
 </head>
 <body>
   <div class="sheet">
-    <img src="caminho-da-sua-imagem.jpg" alt="Retrato do Personagem" class="portrait">
-    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
     <div class="details">
       <h1>Ficha de RPG</h1>
       <h2>Detalhes do Personagem</h2>
@@ -88,23 +88,25 @@
       <p>Raça: Raça do Personagem</p>
       <p>Classe: Classe do Personagem</p>
       <p>Nível: Nível do Personagem</p>
-      <h2>Inventário</h2>
-      <div class="inventory">
-        <img src="icone-item-1.png" alt="Item 1" class="inventory-item">
-        <img src="icone-item-2.png" alt="Item 2" class="inventory-item">
-        <img src="icone-item-3.png" alt="Item 3" class="inventory-item">
-        <!-- Adicione mais itens de inventário aqui -->
-      </div>
-      <h2>Perícias</h2>
-      <div class="skills">
-        <ul>
-          <li class="green">Acrobacias</li>
-          <li class="blue">Adestramento</li>
-          <li class="yellow">Artes</li>
-          <!-- Adicione as perícias restantes com as cores apropriadas -->
-        </ul>
-      </div>
     </div>
+    <div class="inventory">
+      <h2>Inventário</h2>
+      <img src="icone-item-1.png" alt="Item 1" class="inventory-item">
+      <img src="icone-item-2.png" alt="Item 2" class="inventory-item">
+      <img src="icone-item-3.png" alt="Item 3" class="inventory-item">
+      <!-- Adicione mais itens de inventário aqui -->
+    </div>
+    <div class="skills">
+      <h2>Perícias</h2>
+      <ul>
+        <li class="green">Acrobacias</li>
+        <li class="blue">Adestramento</li>
+        <li class="yellow">Artes</li>
+        <!-- Adicione as perícias restantes com as cores apropriadas -->
+      </ul>
+    </div>
+    <img src="caminho-da-sua-imagem.jpg" alt="Retrato do Personagem" class="portrait">
+    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
   </div>
 </body>
 </html>
