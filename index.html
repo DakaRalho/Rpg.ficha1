@@ -15,6 +15,7 @@
   
   .sheet {
     display: flex;
+    flex-direction: column; /* Organizar elementos verticalmente */
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -25,13 +26,12 @@
   .portrait {
     max-width: 200px;
     border-radius: 10px;
-    margin-right: 20px; /* Espaço à direita do retrato */
+    align-self: center; /* Centralizar imagem */
+    margin-bottom: 20px; /* Espaço abaixo do retrato */
   }
 
   .details {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* Organizar os elementos verticalmente */
+    text-align: center; /* Centralizar texto */
   }
 
   .inventory {
@@ -80,6 +80,7 @@
 <body>
   <div class="sheet">
     <img src="caminho-da-sua-imagem.jpg" alt="Retrato do Personagem" class="portrait">
+    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
     <div class="details">
       <h1>Ficha de RPG</h1>
       <h2>Detalhes do Personagem</h2>
@@ -94,45 +95,16 @@
         <img src="icone-item-3.png" alt="Item 3" class="inventory-item">
         <!-- Adicione mais itens de inventário aqui -->
       </div>
+      <h2>Perícias</h2>
+      <div class="skills">
+        <ul>
+          <li class="green">Acrobacias</li>
+          <li class="blue">Adestramento</li>
+          <li class="yellow">Artes</li>
+          <!-- Adicione as perícias restantes com as cores apropriadas -->
+        </ul>
+      </div>
     </div>
-  </div>
-  <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
-  <div class="skills">
-    <ul>
-      <li class="green">Acrobacias</li>
-      <li class="blue">Adestramento</li>
-      <li class="yellow">Artes</li>
-      <li>Atletismo</li>
-          <li>Atualidades</li>
-          <li>Ciências</li>
-          <li>Crime</li>
-          <li>Diplomacia</li>
-          <li>Enganação</li>
-          <li>Fortitude</li>
-          <li>Furtividade</li>
-          <li>Iniciativa</li>
-          <li>Intimidação</li>
-          <li>Intuição</li>
-          <li>Investigação</li>
-          <li>Luta</li>
-          <li>Medicina</li>
-          <li>Ocultismo</li>
-          <li>Percepção</li>
-          <li>Pilotagem</li>
-          <li>Pontaria</li>
-          <li>Profissão ______</li>
-          <li>Reflexos</li>
-          <li>História</li>
-          <li>Sobrevivência</li>
-          <li>Tática</li>
-          <li>Tecnologia</li>
-          <li>Vontade</li>
-          <li>Mecânica</li>
-          <li>Psicologia</li>
-          <li>Fotografia</li>
-          <li>Física</li>
-          <li>Culinária</li>
-    </ul>
   </div>
 </body>
 </html>
