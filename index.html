@@ -15,7 +15,6 @@
   
   .sheet {
     display: flex;
-    flex-direction: row; /* Manter na horizontal */
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -31,6 +30,8 @@
 
   .details {
     flex: 1;
+    display: flex;
+    flex-direction: column; /* Organizar os elementos verticalmente */
   }
 
   .inventory {
@@ -94,14 +95,14 @@
         <!-- Adicione mais itens de inventário aqui -->
       </div>
     </div>
-    <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem à direita -->
   </div>
+  <img src="outra-imagem.jpg" alt="Outra Imagem" class="portrait"> <!-- Nova imagem abaixo do retrato -->
   <div class="skills">
     <ul>
       <li class="green">Acrobacias</li>
       <li class="blue">Adestramento</li>
       <li class="yellow">Artes</li>
-          <li>Atletismo</li>
+      <li>Atletismo</li>
           <li>Atualidades</li>
           <li>Ciências</li>
           <li>Crime</li>
