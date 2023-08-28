@@ -28,7 +28,7 @@
   .portrait {
     max-width: 200px;
     border-radius: 10px;
-    margin-left: 20px; /* Espaço à esquerda do retrato */
+    margin-right: 20px; /* Espaço à direita do retrato */
   }
 
   .details {
@@ -50,6 +50,7 @@
   .inventory-table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 10px; /* Adicionar espaço acima da tabela de inventário */
   }
 
   .inventory-table th,
@@ -59,11 +60,7 @@
     text-align: center;
   }
 
-  .inventory-table tr:nth-child(even) {
-    background-color: #000000;
-    color: #ffffff; /* Define a cor do texto para melhor legibilidade */
-  }
-
+  .inventory-table tr:nth-child(even),
   .inventory-table tr:nth-child(odd) {
     background-color: #000000;
     color: #ffffff; /* Define a cor do texto para melhor legibilidade */
@@ -109,13 +106,8 @@
   h1, h2 {
     color: #ff004c;
   }
-
-
-    /* Adicione espaço entre as seções */
-  .section {
-    margin-bottom: 40px;
-  }
 </style>
+
 </head>
 <body>
   <div class="sheet">
